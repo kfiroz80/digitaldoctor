@@ -1,0 +1,132 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: linear-gradient(to right, #111, #1a1a1a);
+  color: #f2f2f2;
+}
+
+header {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  text-align: center;
+  padding: 40px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 200, 255, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+}
+
+nav {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 12px 0;
+  box-shadow: inset 0 -2px 0 #00ffe0;
+}
+
+nav a {
+  color: #00ffe0;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00ffe055;
+}
+
+h2 {
+  color: #00ffe0;
+}
+
+ul {
+  list-style-type: '💡 ';
+  padding-left: 20px;
+}
+
+a {
+  color: #00c6ff;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0a0a0a;
+  font-size: 14px;
+  color: #888;
+  border-top: 1px solid #222;
+}
+
+/* 🔥 Prompt Section Styling */
+.prompt-section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.prompt-card {
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 10px;
+  width: 300px;
+  padding: 25px;
+  text-align: left;
+  transition: 0.4s ease;
+  box-shadow: 0 0 10px #00ffe055;
+}
+
+.prompt-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffe0aa;
+}
+
+.prompt-card h3 {
+  color: #00ffe0;
+  margin-bottom: 10px;
+}
+
+.prompt-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00ffe0;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #00c6ff;
+  color: #fff;
+}
