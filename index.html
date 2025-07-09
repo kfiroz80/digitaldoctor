@@ -1,89 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DigitalDoctor - Master of Prompts & Tech</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="animate-top">
-    <h1 class="glow-text">🧠 DigitalDoctor</h1>
-    <p>Prompts, Programming, and PC Power – All in One Place 💻</p>
+
+  <header>
+    <h1>🧠 DigitalDoctor</h1>
+    <p>Prompts, Programming & PC Power – All in One Place 💻</p>
   </header>
 
-  <nav class="animate-fade">
+  <nav>
     <a href="#">Home</a>
     <a href="#">Prompts</a>
     <a href="#">HTML Codes</a>
     <a href="#">Windows 11 Tips</a>
     <a href="#">Contact</a>
+    <button id="toggleDark">🌓</button>
   </nav>
 
-  <section class="hero animate-left">
+  <section class="hero">
     <h2>Welcome to the World of Smart Tech</h2>
-    <p>With 15+ years of desktop experience, I bring you over <strong>5000+ AI Prompts</strong> and <strong>2000+ HTML Snippets</strong>.</p>
+    <p>With 15+ years of experience, I bring you <strong>5000+ AI Prompts</strong> and <strong>2000+ HTML Snippets</strong> for power users, students, and coders.</p>
   </section>
 
-  <section class="features animate-right">
+  <section class="features">
     <h2>🧰 What I Offer</h2>
     <ul>
-      <li>✨ Prompt Packs: AI, Image Gen, Chat, Hacking, Study & More</li>
-      <li>💻 HTML & CSS Codes: Buttons, Effects, UI Components</li>
+      <li>✨ Prompt Packs: AI, Image Gen, Chat, Study, Hacking & More</li>
+      <li>💻 HTML & CSS Codes: Buttons, UI Effects, Full Templates</li>
       <li>🛠️ Windows 11 Tweaks, Fixes, Automation Tools</li>
-      <li>📚 Career Guidance + Educational Tools</li>
+      <li>📚 Career Guidance & Educational Resources</li>
     </ul>
   </section>
 
-  <!-- ✅ Prompt Download Section -->
-  <section class="prompt-section animate-bottom">
-    <h2>💡 Prompt Collections</h2>
-    <div class="card-container">
-
-      <div class="prompt-card">
-        <h3>🖼️ Image Gen Prompts</h3>
-        <p>1200+ prompts for stunning AI image creation — Midjourney, DALL·E, etc.</p>
-        <a href="image-prompts.zip" class="btn" download>Download Image Prompts</a>
-      </div>
-
-      <div class="prompt-card">
-        <h3>💬 Exam & Chat Hacks</h3>
-        <p>Smart prompts for solving exams, chats, shortcuts & education hacks.</p>
-        <a href="exam-hacks.zip" class="btn" download>Download Exam Prompts</a>
-      </div>
-
-      <div class="prompt-card">
-        <h3>💻 HTML & CSS Codes</h3>
-        <p>2000+ tested snippets for buttons, loaders, effects, UI blocks & more.</p>
-        <a href="html-snippets.zip" class="btn" download>Download HTML Codes</a>
-      </div>
-
-    </div>
+  <section class="downloads">
+    <h2>📥 Download Prompt Packs</h2>
+    <a class="btn" href="image-prompts.zip" download>📦 Image Prompt Pack</a>
+    <a class="btn" href="html-snippets.zip" download>💻 HTML Code Pack</a>
+    <a class="btn" href="exam-hacks.zip" download>🧪 Exam Hack Prompt Pack</a>
   </section>
 
-  <section class="experience animate-bottom">
-    <h2>👨‍💻 About Me</h2>
-    <p>I’m Firoz, a desktop expert with over 15 years of experience. I help people optimize and secure their computers — and now, I’m sharing everything with you.</p>
-  </section>
-
-  <section class="contact animate-fade">
+  <section class="contact">
     <h2>📬 Connect With Me</h2>
     <p>Email: <a href="mailto:digitaldoctor@example.com">digitaldoctor@example.com</a></p>
     <p>YouTube: <a href="#">@DigitalDoctorOfficial</a></p>
     <p>WhatsApp: +91-90000-00000</p>
   </section>
 
-  <footer class="animate-top">
+  <footer>
     <p>&copy; 2025 DigitalDoctor by Firoz. All rights reserved.</p>
   </footer>
 
   <script>
-    ScrollReveal().reveal('.animate-top', { origin: 'top', distance: '50px', duration: 1000, reset: true });
-    ScrollReveal().reveal('.animate-left', { origin: 'left', distance: '50px', duration: 1000, reset: true });
-    ScrollReveal().reveal('.animate-right', { origin: 'right', distance: '50px', duration: 1000, reset: true });
-    ScrollReveal().reveal('.animate-bottom', { origin: 'bottom', distance: '50px', duration: 1000, reset: true });
-    ScrollReveal().reveal('.animate-fade', { opacity: 0, duration: 1200, reset: true });
+    const root = document.documentElement;
+    const toggle = document.getElementById('toggleDark');
+    toggle.onclick = () => {
+      const theme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
+    // On load
+    root.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
   </script>
+
 </body>
 </html>
