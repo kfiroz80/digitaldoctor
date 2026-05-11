@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL DOCTOR // AI Nexus</title>
+    <!-- Scripts & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        
+        :root { 
+            --primary: #8b5cf6; 
+            --secondary: #ec4899; 
+            --bg: #030712; 
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            color: white; 
+            overflow-x: hidden; 
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card { 
+            background: rgba(255, 255, 255, 0.03); 
+            backdrop-filter: blur(12px); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); 
+        }
+
+        .glass-card:hover { 
+            border-color: var(--primary); 
+            transform: translateY(-10px); 
+            box-shadow: 0 20px 40px rgba(139, 92, 246, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Neon Button Styling */
+        .neon-btn { 
+            background: linear-gradient(90deg, var(--primary), var(--secondary)); 
+            transition: 0.3s; 
+            border: none;
+        }
+
+        .neon-btn:hover { 
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.6); 
+            transform: scale(1.05);
+        }
+
+        /* Background Glow */
+        .bg-glow {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(3, 7, 18, 0) 70%);
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="p-6 flex justify-between items-center border-b border-white/5 backdrop-blur-md sticky top-0 z-50">
+        <div class="text-2xl font-extrabold italic tracking-tighter">
+            DIGITAL<span class="text-purple-500">DOCTOR</span>
+        </div>
+        <button class="neon-btn px-6 py-2 rounded-full text-sm font-bold text-white">
+            Connect AI
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="px-4 py-1.5 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-xs font-bold mb-6 inline-block">
+                LIVE ON GITHUB PAGES
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                Future of AI is Here.
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg mb-10 leading-relaxed">
+                Welcome to <span class="text-white font-semibold">DigitalDoctor</span>. Maine ye website successfully GitHub Pages se live ki hai! Ye mera pehla kadam hai web development ki duniya mein.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#explore" class="bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-gray-200 transition">Get Started</a>
+                <a href="https://github.com/kfiroz80" target="_blank" class="glass-card px-8 py-3 rounded-xl font-bold hover:text-purple-400 transition">Follow GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Cards Section -->
+    <div id="explore" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 pb-32">
+        <!-- Card 1 -->
+        <div class="glass-card p-8 rounded-[2rem]">
+            <div class="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="brain" class="text-purple-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Smart Analysis</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Deep learning algorithms tailored for your specific data patterns and needs.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-card p-8 rounded-[2rem]">
+            <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="zap" class="text-pink-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Fast Deployment</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Zero-latency integration. Deploy your AI models across the globe in seconds.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-card p-8 rounded-[2rem]">
+            <div class="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                <i data-lucide="shield" class="text-blue-500"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Secure Link</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Enterprise-grade encryption protecting every byte of your artificial intelligence.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-white/5 text-gray-500 text-sm">
+        <p>© 2024 DigitalDoctor. Created with ❤️ by Firoz</p>
+    </footer>
+
+    <script>
+        // Icons ko activate karne ke liye
+        lucide.createIcons();
+    </script>
+</body>
+</html>
