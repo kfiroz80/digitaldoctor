@@ -1,72 +1,122 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DigitalDoctor - Master of Prompts & Tech</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL DOCTOR // Advanced Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #020617; color: white; }
+        .glass-card { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .sub-menu { display: none; animation: slideUp 0.4s ease; }
+        .active-menu { display: block; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .main-btn { transition: 0.3s; background: #1e293b; }
+        .main-btn:hover { background: #3b82f6; transform: translateY(-3px); }
+        .sub-btn { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); transition: 0.2s; }
+        .sub-btn:hover { background: #3b82f6; color: white; }
+        .active-main { background: #3b82f6 !important; box-shadow: 0 0 20px rgba(59, 130, 246, 0.4); }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>🧠 DigitalDoctor</h1>
-    <p>Prompts, Programming & PC Power – All in One Place 💻</p>
-  </header>
+    <nav class="p-6 text-center border-b border-white/5 bg-[#020617]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="text-3xl font-extrabold italic tracking-tighter">DIGITAL<span class="text-blue-500">DOCTOR</span></div>
+        <p class="text-xs text-gray-500 mt-1 uppercase tracking-[0.2em]">The Future of Smart Tech</p>
+    </nav>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Prompts</a>
-    <a href="#">HTML Codes</a>
-    <a href="#">Windows 11 Tips</a>
-    <a href="#">Contact</a>
-    <button id="toggleDark">🌓</button>
-  </nav>
+    <div class="max-w-5xl mx-auto px-6 py-12">
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button onclick="showMenu(event, 'prompt-menu')" class="main-btn px-8 py-4 rounded-2xl font-bold flex items-center gap-2 active-main">
+                <i data-lucide="sparkles"></i> AI Prompts
+            </button>
+            <button onclick="showMenu(event, 'html-menu')" class="main-btn px-8 py-4 rounded-2xl font-bold flex items-center gap-2">
+                <i data-lucide="code"></i> HTML Magic
+            </button>
+            <button onclick="showMenu(event, 'windows-menu')" class="main-btn px-8 py-4 rounded-2xl font-bold flex items-center gap-2">
+                <i data-lucide="monitor"></i> Windows 11 Expert
+            </button>
+        </div>
 
-  <section class="hero">
-    <h2>Welcome to the World of Smart Tech</h2>
-    <p>With 15+ years of experience, I bring you <strong>5000+ AI Prompts</strong> and <strong>2000+ HTML Snippets</strong> for power users, students, and coders.</p>
-  </section>
+        <div class="glass-card p-10 rounded-[3rem] min-h-[300px] text-center">
+            
+            <div id="prompt-menu" class="sub-menu active-menu">
+                <h3 class="text-2xl font-bold mb-6 text-blue-400">Choose Prompt Category</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="edu-prompts.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="graduation-cap" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Education Prompts</span>
+                        <span class="text-xs text-gray-500">Study & Teaching</span>
+                    </a>
+                    <a href="tech-prompts.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="terminal" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Tech & Coding</span>
+                        <span class="text-xs text-gray-500">IT & Troubleshooting</span>
+                    </a>
+                    <a href="health-prompts.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="heart-pulse" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Health & Life</span>
+                        <span class="text-xs text-gray-500">Fitness & Motivation</span>
+                    </a>
+                </div>
+            </div>
 
-  <section class="features">
-    <h2>🧰 What I Offer</h2>
-    <ul>
-      <li>✨ Prompt Packs: AI, Image Gen, Chat, Study, Hacking & More</li>
-      <li>💻 HTML & CSS Codes: Buttons, UI Effects, Full Templates</li>
-      <li>🛠️ Windows 11 Tweaks, Fixes, Automation Tools</li>
-      <li>📚 Career Guidance & Educational Resources</li>
-    </ul>
-  </section>
+            <div id="html-menu" class="sub-menu">
+                <h3 class="text-2xl font-bold mb-6 text-cyan-400">Advanced Web Codes</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="html-anim.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="layers" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Magic Animations</span>
+                    </a>
+                    <a href="html-buttons.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="mouse-pointer-2" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Stylized Buttons</span>
+                    </a>
+                    <a href="html-full.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="layout" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Pro Templates</span>
+                    </a>
+                </div>
+            </div>
 
-  <section class="downloads">
-    <h2>📥 Download Prompt Packs</h2>
-    <a class="btn" href="image-prompts.zip" download>📦 Image Prompt Pack</a>
-    <a class="btn" href="html-snippets.zip" download>💻 HTML Code Pack</a>
-    <a class="btn" href="exam-hacks.zip" download>🧪 Exam Hack Prompt Pack</a>
-  </section>
+            <div id="windows-menu" class="sub-menu">
+                <h3 class="text-2xl font-bold mb-6 text-green-400">System Engineer Tools</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="win-boost.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="zap" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Boost Up Settings</span>
+                    </a>
+                    <a href="win-features.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="star" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">New Features Fix</span>
+                    </a>
+                    <a href="win-tricks.zip" class="sub-btn p-6 rounded-2xl">
+                        <i data-lucide="shield-check" class="mx-auto mb-3"></i>
+                        <span class="block font-semibold">Hidden Tricks</span>
+                    </a>
+                </div>
+            </div>
 
-  <section class="contact">
-  <h2>📬 Connect With Me</h2>
-  <p>Email: <a href="mailto:aidigitaldoctor@gmail.com">aidigitaldoctor@gmail.com</a></p>
-  <p>YouTube: <a href="https://www.youtube.com/@AI_FTECH" target="_blank">@AI_FTECH</a></p>
-  <p>WhatsApp: +91-90000-00000</p>
-  </section>
+        </div>
+    </div>
 
-
-  <footer>
-    <p>&copy; 2025 DigitalDoctor by Firoz. All rights reserved.</p>
-  </footer>
-
-  <script>
-    const root = document.documentElement;
-    const toggle = document.getElementById('toggleDark');
-    toggle.onclick = () => {
-      const theme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', theme);
-      localStorage.setItem('theme', theme);
-    };
-    // On load
-    root.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
-  </script>
-
+    <script>
+        function showMenu(evt, menuId) {
+            var i, menus, buttons;
+            menus = document.getElementsByClassName("sub-menu");
+            for (i = 0; i < menus.length; i++) {
+                menus[i].classList.remove("active-menu");
+            }
+            buttons = document.getElementsByClassName("main-btn");
+            for (i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active-main");
+            }
+            document.getElementById(menuId).classList.add("active-menu");
+            evt.currentTarget.classList.add("active-main");
+        }
+        lucide.createIcons();
+    </script>
 </body>
 </html>
